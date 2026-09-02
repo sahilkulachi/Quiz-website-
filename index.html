@@ -9,39 +9,73 @@
 
 <body>
 
-    <div class="quiz-container">
-
-        <div class="quiz-header">
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen">
+        <div class="start-box">
             <h1>Quiz Master</h1>
             <p>Test Your Knowledge</p>
+
+            <div class="category-box">
+                <h3>Choose Category</h3>
+
+                <select id="category">
+                    <option value="general">General Knowledge</option>
+                    <option value="science">Science</option>
+                    <option value="sports">Sports</option>
+                    <option value="technology">Technology</option>
+                </select>
+            </div>
+
+            <button id="start-btn">Start Quiz</button>
         </div>
+    </div>
 
-        <div class="quiz-box">
 
-            <div class="quiz-info">
-                <span id="question-number">Question 1 of 10</span>
-                <span id="score">Score: 0</span>
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="screen hidden">
+
+        <div class="quiz-container">
+
+            <div class="quiz-header">
+                <h1>Quiz Master</h1>
+                <p>Challenge Yourself</p>
             </div>
 
-            <div class="timer">
-                Time: <span id="time">15</span>s
+            <div class="quiz-box">
+
+                <div class="quiz-info">
+                    <span id="question-number">
+                        Question 1 of 10
+                    </span>
+
+                    <span id="score">
+                        Score: 0
+                    </span>
+                </div>
+
+                <div class="timer">
+                    Time: <span id="time">15</span>s
+                </div>
+
+                <h2 id="question">
+                    Question will appear here
+                </h2>
+
+                <div id="answers" class="answers">
+                </div>
+
+                <button id="next-btn">
+                    Next Question
+                </button>
+
             </div>
-
-            <h2 id="question">Question will appear here</h2>
-
-            <div id="answers" class="answers">
-                <button class="answer">Answer 1</button>
-                <button class="answer">Answer 2</button>
-                <button class="answer">Answer 3</button>
-                <button class="answer">Answer 4</button>
-            </div>
-
-            <button id="next-btn">Next Question</button>
 
         </div>
 
     </div>
 
+
     <script src="script.js"></script>
+
 </body>
-  </html>
+</html>
